@@ -4,11 +4,12 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:coolStuffWithFormattedText="clr-namespace:CoolStuffWithFormattedText;assembly=CoolStuffWithFormattedText"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="CoolStuffWithFormattedText.Views.MainPage"
-             Title="MainPage">
+             x:Class="CoolStuffWithFormattedText.Views.FontIconPage">
   <StackLayout HorizontalOptions="Center"
                VerticalOptions="Center">
-   <Button Text="FontIcon" Command="{Binding FontIconTappedCommand}"/>
-   <Button Text="FormattedText" Command="{Binding FormattedTextTappedCommand}"/>
+    <coolStuffWithFormattedText:FontIcon Text="&#xf19d;"
+                                         FontFamily="FontAwesome"
+                                         TextColor="Maroon"
+                                         FontSize="24"/>
   </StackLayout>
 </ContentPage>

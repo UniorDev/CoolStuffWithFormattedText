@@ -1,5 +1,5 @@
-﻿using Prism.Unity;
-using CoolStuffWithFormattedText.Views;
+﻿using CoolStuffWithFormattedText.Views;
+using Prism.Unity;
 
 namespace CoolStuffWithFormattedText
 {
@@ -11,12 +11,15 @@ namespace CoolStuffWithFormattedText
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync($"{nameof(NavigationBarPage)}/{nameof(Views.MainPage)}");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<FontIconPage>();
+            Container.RegisterTypeForNavigation<FormattedTextPage>();
+            Container.RegisterTypeForNavigation<NavigationBarPage>();
         }
     }
 }

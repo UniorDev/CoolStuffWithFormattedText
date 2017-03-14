@@ -1,35 +1,29 @@
-﻿using Prism.Commands;
+﻿using CoolStuffWithFormattedText.Views;
+using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace CoolStuffWithFormattedText.ViewModels
 {
-    public class MainPageViewModel : BindableBase, INavigationAware
+    public class MainPageViewModel : BindableBase
     {
-        private string _title;
-        public string Title
+        public DelegateCommand FontIconTappedCommand => new DelegateCommand(OnFontIconTapped);
+        public DelegateCommand FormattedTextTappedCommand => new DelegateCommand(OnFormattedTextTapped);
+        private readonly INavigationService _navigationService;
+
+        public MainPageViewModel(INavigationService navigationService)
         {
-            get { return _title; }
-            set { SetProperty(ref _title, value); }
+            _navigationService = navigationService;
         }
 
-        public MainPageViewModel()
+        private void OnFontIconTapped()
         {
-
+            _navigationService.NavigateAsync($"{nameof(FontIconPage)}");
         }
 
-        public void OnNavigatedFrom(NavigationParameters parameters)
+        private void OnFormattedTextTapped()
         {
-
-        }
-
-        public void OnNavigatedTo(NavigationParameters parameters)
-        {
-            if ( parameters.ContainsKey("title") )
-                Title = ( string )parameters["title"] + " and Prism";
+            _navigationService.NavigateAsync($"{nameof(FormattedTextPage)}");
         }
     }
 }
