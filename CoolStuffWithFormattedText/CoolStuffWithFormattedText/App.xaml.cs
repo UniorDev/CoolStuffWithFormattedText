@@ -20,6 +20,8 @@ namespace CoolStuffWithFormattedText
             Container.RegisterTypeForNavigation<FontIconPage>();
             Container.RegisterTypeForNavigation<FormattedTextPage>();
             Container.RegisterTypeForNavigation<NavigationBarPage>();
+            Container.RegisterTypeForNavigation<ComboPage>();
+            Container.RegisterTypeForNavigation<UsefulPage>();
         }
     }
 }

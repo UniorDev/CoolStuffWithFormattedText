@@ -35,14 +35,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CustomSpannableLabel.cs" />
     <Compile Include="FontIcon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ComboPageViewModel.cs" />
     <Compile Include="ViewModels\FontIconPageViewModel.cs" />
     <Compile Include="ViewModels\FormattedTextPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\NavigationBarPageViewModel.cs" />
+    <Compile Include="ViewModels\UsefulPageViewModel.cs" />
+    <Compile Include="Views\ComboPage.xaml.cs">
+      <DependentUpon>ComboPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\NavigationBarPage.xaml.cs">
       <DependentUpon>NavigationBarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UsefulPage.xaml.cs">
+      <DependentUpon>UsefulPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +129,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\NavigationBarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ComboPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\UsefulPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

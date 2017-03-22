@@ -10,5 +10,7 @@
                VerticalOptions="Center">
    <Button Text="FontIcon" Command="{Binding FontIconTappedCommand}"/>
    <Button Text="FormattedText" Command="{Binding FormattedTextTappedCommand}"/>
+   <Button Text="Combo" Command="{Binding ComboTappedCommand}"/>
+   <Button Text="Useful" Command="{Binding UsefulTappedCommand}"/>
   </StackLayout>
 </ContentPage>

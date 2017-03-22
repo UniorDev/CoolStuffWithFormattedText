@@ -5,4 +5,31 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="CoolStuffWithFormattedText.Views.FormattedTextPage">
 
+  <StackLayout>
+    <Label>
+      <Label.FormattedText>
+        <FormattedString>
+          <FormattedString.Spans>
+            <Span Text="Red, "
+                  ForegroundColor="Red"
+                  FontAttributes="Italic"
+                  FontSize="20" />
+            <Span Text=" blue, "
+                  ForegroundColor="Blue"
+                  FontSize="32" />
+            <Span Text=" and green! "
+                  ForegroundColor="Green"
+                  FontSize="12"/>
+          </FormattedString.Spans>
+        </FormattedString>
+      </Label.FormattedText>
+    </Label>
+    
+    <Label FormattedText="{Binding CustomText}"/>
+    
+    <Label FormattedText="{Binding DynamicFormattedText}"/> 
+  
+    <Button Command="{Binding AddSpanCommand}" Text="Add Span" HorizontalOptions="FillAndExpand"/>
+  
+  </StackLayout>
 </ContentPage>

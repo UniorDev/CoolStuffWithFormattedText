@@ -12,6 +12,7 @@ namespace CoolStuffWithFormattedText.Droid
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Label> e)
         {
             base.OnElementChanged(e);
+            if (Control == null || Element.FontFamily == null) return;
 
             if ( e.OldElement == null )
             {
@@ -21,7 +22,7 @@ namespace CoolStuffWithFormattedText.Droid
                 }
                 catch ( Java.Lang.RuntimeException exception )
                 {
-                    if ( exception.Message == "native typeface cannot be made" || exception.Message == "Font asset not found FontAwesome.ttf" )
+                    if ( exception.Message == "native typeface cannot be made")
                         Control.Typeface = Typeface.CreateFromAsset(Forms.Context.Assets, Element.FontFamily + ".otf");
                     else
                         throw;

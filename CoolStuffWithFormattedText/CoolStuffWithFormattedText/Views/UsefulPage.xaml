@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:coolStuffWithFormattedText="clr-namespace:CoolStuffWithFormattedText;assembly=CoolStuffWithFormattedText"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="CoolStuffWithFormattedText.Views.UsefulPage">
+  <StackLayout Padding="10, 20, 10, 20" Spacing="20">
+    <coolStuffWithFormattedText:CustomSpannableLabel FormattedText="{Binding NewLineText}"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand"
+                                                     HorizontalTextAlignment="Center"/>
+
+    <coolStuffWithFormattedText:CustomSpannableLabel FormattedText="{Binding CoffeeText}"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand"
+                                                     HorizontalTextAlignment="Center"/>
+
+    <coolStuffWithFormattedText:CustomSpannableLabel FormattedText="{Binding ParagraphText}"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand"
+                                                     HorizontalTextAlignment="Start"/>
+    
+  </StackLayout>
+</ContentPage>

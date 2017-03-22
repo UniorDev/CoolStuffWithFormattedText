@@ -128,6 +128,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomSpannableLabelRenderer.cs" />
+    <Compile Include="CustomTypefaceSpan.cs" />
     <Compile Include="FontIconRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
